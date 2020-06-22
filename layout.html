@@ -41,25 +41,6 @@
     <body>
         <h1>{% block heading %}{% endblock %}</h1>
 
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          <ul class=flashes>
-          {% for message in messages %}
-          {% if alert == 'success' %}
-          <div class="alert alert-success" role="alert" id='alertmessage'>
-            {{message}}
-          </div>
-          {%else%}
-          <div class="alert alert-danger" role="alert" id='alertmessage'>
-            {{message}}
-          </div>
-          {%endif%}
-          {% endfor %}
-          </ul>
-        {% endif %}
-        {% endwith %}
-        <br>
-        
         {% block body %}
         {% endblock body%}
       
